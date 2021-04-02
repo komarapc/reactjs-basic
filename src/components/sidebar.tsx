@@ -12,6 +12,17 @@ const Sidebar = (props: any) => {
                 </li>
               ) : (
                 <li key={key} className="list-group-item">
+                  {track_list.is_done ? (
+                    <i
+                      className="fa fa-check-circle mr-3"
+                      style={{ color: "#4CAF50" }}
+                    ></i>
+                  ) : (
+                    <i
+                      className="fa fa-ban mr-3"
+                      style={{ color: "#f44336" }}
+                    ></i>
+                  )}
                   {track_list.id} - {track_list.track_name}
                 </li>
               )}
