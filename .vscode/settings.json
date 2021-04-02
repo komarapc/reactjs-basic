@@ -5,5 +5,5 @@
   "emmet.includeLanguages": {
     "javascript" : "reactjavascript",
     "typescript" : "reacttypescript"
-  }
+  },
 }
