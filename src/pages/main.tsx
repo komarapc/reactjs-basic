@@ -1,22 +1,21 @@
-import Login from "./auth/login";
-import Logout from "./auth/logout";
-import { useState } from "react";
-
 const MainPage = (props: any) => {
-  const [isAuth, setIsAuth] = useState(false);
-
-  const handleAuth = () => {
-    isAuth ? setIsAuth(false) : setIsAuth(true);
-  };
-
   return (
     <div>
       <h4 className="display-4">{props.title}</h4>
-      {isAuth ? (
-        <Logout button_name="Sign Out" isAuth={handleAuth} />
-      ) : (
-        <Login button_name="Sign In" isAuth={handleAuth} />
-      )}
+      <h3 className="font-weight-normal">User</h3>
+      <div className="row p-3">
+        {props.data_person.map((person: any, key: number) => {
+          return (
+            <div
+              key={key}
+              className="col-sm-12 col-md-3 p-3 border rounded shadow-sm m-1"
+            >
+              <strong>{person.person_name}</strong> <br />
+              <small>{person.email}</small>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

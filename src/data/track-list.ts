@@ -46,7 +46,7 @@ const track_lists: { id: number; track_name: string; is_done: boolean }[] = [
   },
   {
     id: 10,
-    track_name: "Adding Styles",
+    track_name: "Props",
     is_done: false,
   },
 ];

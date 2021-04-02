@@ -2,11 +2,12 @@ import { Fragment } from "react";
 import MainPage from "./pages/main";
 import Navbar from "./components/navbar";
 import Sidebar from "./components/sidebar";
+import data_person from "./data/person";
 import track_lists from "./data/track-list";
 
 const Home = () => {
-  const title: string = "Using State";
-  const current_track_list: number = 8;
+  const title: string = "Outputting Lists";
+  const current_track_list: number = 9;
   return (
     <Fragment>
       <Navbar></Navbar>
@@ -19,7 +20,7 @@ const Home = () => {
             />
           </div>
           <div className="col-sm-12 col-md-9 text-left">
-            <MainPage title={title} />
+            <MainPage title={title} data_person={data_person} />
           </div>
         </div>
       </div>
