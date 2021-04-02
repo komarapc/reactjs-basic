@@ -6,4 +6,6 @@
     "javascript" : "reactjavascript",
     "typescript" : "reacttypescript"
   },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  
 }
