@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
+
 import Blog from "./blog";
-import { useState } from "react";
 
 const MainPage = (props: any) => {
   const [blog_lists, setBlogLists] = useState([
@@ -29,6 +30,11 @@ const MainPage = (props: any) => {
     const newBlog = blog_lists.filter((blog) => blog.id !== id);
     setBlogLists(newBlog);
   };
+
+  useEffect(() => {
+    console.log("use effect is running");
+  });
+
   return (
     <div>
       <h4 className="display-4">{props.title}</h4>

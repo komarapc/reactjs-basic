@@ -57,7 +57,7 @@ const track_lists: { id: number; track_name: string; is_done: boolean }[] = [
   {
     id: 12,
     track_name: "Function as Props",
-    is_done: false,
+    is_done: true,
   },
   {
     id: 13,
