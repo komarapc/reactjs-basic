@@ -4,19 +4,7 @@ import Navbar from "./components/navbar";
 import Sidebar from "./components/sidebar";
 
 const Home = () => {
-  const title: string = "Click Event";
-  const persons: { id: number; person_name: string; email: string }[] = [
-    {
-      id: 0,
-      person_name: "Komar",
-      email: "komar.izmi@gmail.com",
-    },
-    {
-      id: 1,
-      person_name: "Haruka",
-      email: "haruka@gmail.com",
-    },
-  ];
+  const title: string = "Using State";
 
   return (
     <Fragment>
