@@ -5,8 +5,9 @@ import Sidebar from "./components/sidebar";
 import track_lists from "./data/track-list";
 
 const Home = () => {
-  const title: string = "Function as Props";
   const current_track_list: number = 12;
+  const tracks = track_lists.filter((track) => track.id === current_track_list);
+  const title: string = tracks[0].track_name;
   return (
     <Fragment>
       <Navbar></Navbar>
