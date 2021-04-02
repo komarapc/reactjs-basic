@@ -1,4 +1,7 @@
 import { Fragment } from "react";
+import MainPage from "./pages/main";
+import Navbar from "./components/navbar";
+import Sidebar from "./components/sidebar";
 
 const Home = () => {
   const title: string = "Home Components";
@@ -17,15 +20,16 @@ const Home = () => {
 
   return (
     <Fragment>
+      <Navbar></Navbar>
       <div className="container">
-        <h1 className="display-4">
-          {title} <br />
-        </h1>
-        <p>
-          {persons.map((person, i) => {
-            return <div>{person.email}</div>;
-          })}
-        </p>
+        <div className="row">
+          <div className="col-sm-12 col-md-4">
+            <Sidebar />
+          </div>
+          <div className="col-sm-12 col-md-8">
+            <MainPage />
+          </div>
+        </div>
       </div>
     </Fragment>
   );
