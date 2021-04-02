@@ -11,6 +11,7 @@ const MainPage = (props: any) => {
 
   return (
     <div>
+      <h4 className="display-4">{props.title}</h4>
       {isAuth ? (
         <Logout button_name="Sign Out" isAuth={handleAuth} />
       ) : (
