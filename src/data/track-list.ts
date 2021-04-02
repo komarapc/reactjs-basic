@@ -42,11 +42,31 @@ const track_lists: { id: number; track_name: string; is_done: boolean }[] = [
   {
     id: 9,
     track_name: "Outputting Lists",
-    is_done: false,
+    is_done: true,
   },
   {
     id: 10,
     track_name: "Props",
+    is_done: true,
+  },
+  {
+    id: 11,
+    track_name: "Reusing Component",
+    is_done: false,
+  },
+  {
+    id: 12,
+    track_name: "Function as Props",
+    is_done: false,
+  },
+  {
+    id: 13,
+    track_name: "useEffect Hook (Basic)",
+    is_done: false,
+  },
+  {
+    id: 14,
+    track_name: "useEffect Dependencies",
     is_done: false,
   },
 ];

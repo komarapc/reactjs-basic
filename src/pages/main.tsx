@@ -1,21 +1,42 @@
+import Blog from "./blog";
+
 const MainPage = (props: any) => {
+  const blog_lists: { id: number; title: string; author: string }[] = [
+    {
+      id: 1,
+      title: "First Blog",
+      author: "Admin",
+    },
+    {
+      id: 2,
+      title: "Second Blog",
+      author: "Haruka",
+    },
+    {
+      id: 3,
+      title: "Third Blog",
+      author: "Haruka",
+    },
+    {
+      id: 4,
+      title: "Fourth Blog",
+      author: "Admin",
+    },
+  ];
   return (
     <div>
       <h4 className="display-4">{props.title}</h4>
-      <h3 className="font-weight-normal">User</h3>
-      <div className="row p-3">
-        {props.data_person.map((person: any, key: number) => {
-          return (
-            <div
-              key={key}
-              className="col-sm-12 col-md-3 p-3 border rounded shadow-sm m-1"
-            >
-              <strong>{person.person_name}</strong> <br />
-              <small>{person.email}</small>
-            </div>
-          );
-        })}
-      </div>
+      <h1 className="font-weight-normal">&gt;Blog Components</h1>
+      <hr />
+      <Blog blogs={blog_lists} title="All blog's" />
+      <Blog
+        blogs={blog_lists.filter((blog: any) => blog.author === "Admin")}
+        title="Admin blog's"
+      />
+      <Blog
+        blogs={blog_lists.filter((blog: any) => blog.author === "Haruka")}
+        title="Haruka blog's"
+      />
     </div>
   );
 };
