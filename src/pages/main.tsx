@@ -32,7 +32,7 @@ const MainPage = (props: any) => {
   return (
     <div>
       <h4 className="display-4">{props.title}</h4>
-      <h1 className="font-weight-normal">&gt;Blog Components</h1>
+      {/* <h1 className="font-weight-normal">&gt;Blog Components</h1> */}
       <hr />
       <Blog
         blogs={blog_lists}
