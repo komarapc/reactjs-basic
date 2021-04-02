@@ -1,7 +1,8 @@
 import Blog from "./blog";
+import { useState } from "react";
 
 const MainPage = (props: any) => {
-  const blog_lists: { id: number; title: string; author: string }[] = [
+  const [blog_lists, setBlogLists] = useState([
     {
       id: 1,
       title: "First Blog",
@@ -22,20 +23,32 @@ const MainPage = (props: any) => {
       title: "Fourth Blog",
       author: "Admin",
     },
-  ];
+  ]);
+
+  const handleDeleteBlog = (id: number) => {
+    const newBlog = blog_lists.filter((blog) => blog.id !== id);
+    setBlogLists(newBlog);
+  };
   return (
     <div>
       <h4 className="display-4">{props.title}</h4>
       <h1 className="font-weight-normal">&gt;Blog Components</h1>
       <hr />
-      <Blog blogs={blog_lists} title="All blog's" />
+      <Blog
+        blogs={blog_lists}
+        title="All blog's"
+        is_button_delete={true}
+        delete_blog={handleDeleteBlog}
+      />
       <Blog
         blogs={blog_lists.filter((blog: any) => blog.author === "Admin")}
         title="Admin blog's"
+        is_button_delete={false}
       />
       <Blog
         blogs={blog_lists.filter((blog: any) => blog.author === "Haruka")}
         title="Haruka blog's"
+        is_button_delete={false}
       />
     </div>
   );

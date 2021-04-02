@@ -1,5 +1,4 @@
 const Blog = (props: any) => {
-  console.log(props);
   return (
     <div className="mb-5">
       <h3 className="font-weight-light">{props.title}</h3>
@@ -11,6 +10,18 @@ const Blog = (props: any) => {
           >
             <h5 className="font-weight-normal">{blog.title}</h5>
             <small>Author: {blog.author}</small>
+            {props.is_button_delete ? (
+              <div>
+                <button
+                  className="btn btn-sm btn-danger mt-2"
+                  onClick={() => props.delete_blog(blog.id)}
+                >
+                  Delete
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         );
       })}

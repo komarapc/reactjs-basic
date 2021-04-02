@@ -5,8 +5,8 @@ import Sidebar from "./components/sidebar";
 import track_lists from "./data/track-list";
 
 const Home = () => {
-  const title: string = "Reusing Component";
-  const current_track_list: number = 11;
+  const title: string = "Function as Props";
+  const current_track_list: number = 12;
   return (
     <Fragment>
       <Navbar></Navbar>
