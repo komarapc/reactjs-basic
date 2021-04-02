@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import Sidebar from "./components/sidebar";
 
 const Home = () => {
-  const title: string = "Home Components";
+  const title: string = "Click Event";
   const persons: { id: number; person_name: string; email: string }[] = [
     {
       id: 0,
@@ -22,12 +22,12 @@ const Home = () => {
     <Fragment>
       <Navbar></Navbar>
       <div className="container">
-        <div className="row">
-          <div className="col-sm-12 col-md-4">
+        <div className="row p-3">
+          <div className="col-sm-12 col-md-3 border rounded text-left">
             <Sidebar />
           </div>
-          <div className="col-sm-12 col-md-8">
-            <MainPage />
+          <div className="col-sm-12 col-md-9 text-left">
+            <MainPage title={title} />
           </div>
         </div>
       </div>
