@@ -6,8 +6,8 @@ import data_person from "./data/person";
 import track_lists from "./data/track-list";
 
 const Home = () => {
-  const title: string = "Outputting Lists";
-  const current_track_list: number = 9;
+  const title: string = "Props";
+  const current_track_list: number = 10;
   return (
     <Fragment>
       <Navbar></Navbar>
@@ -20,6 +20,7 @@ const Home = () => {
             />
           </div>
           <div className="col-sm-12 col-md-9 text-left">
+            {/* title = props, data_person = props */}
             <MainPage title={title} data_person={data_person} />
           </div>
         </div>
