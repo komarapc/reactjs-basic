@@ -11,11 +11,11 @@ const Blog = (props: any) => {
           >
             <h5 className="font-weight-normal">{blog.title}</h5>
             <small>Author: {blog.author}</small>
-            {props.has_button_delete ? (
+            {props.has_delete_button ? (
               <div>
                 <button
                   className="btn btn-sm btn-danger mt-2"
-                  onClick={() => props.delete_blog(blog.id)}
+                  onClick={() => props.action_button(blog.id)}
                 >
                   Delete
                 </button>
