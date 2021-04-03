@@ -1,0 +1,40 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "First Blog",
+      "author": "Komar",
+      "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
+    },
+    {
+      "id": 2,
+      "title": "Second Blog",
+      "author": "Haruka",
+      "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
+    },
+    {
+      "id": 3,
+      "title": "Third Blog",
+      "author": "Ayana",
+      "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
+    },
+    {
+      "id": 4,
+      "title": "Fourth Blog",
+      "author": "Komar",
+      "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
+    },
+    {
+      "id": 5,
+      "title": "Fifth Blog",
+      "author": "Ayana",
+      "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
+    },
+    {
+      "id": 6,
+      "title": "Sixth Blog",
+      "author": "Haruka",
+      "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
+    }
+  ]
+}

@@ -67,12 +67,12 @@ const track_lists: { id: number; track_name: string; is_done: boolean }[] = [
   {
     id: 14,
     track_name: "useEffect Dependencies",
-    is_done: false,
+    is_done: true,
   },
   {
     id: 15,
     track_name: "Using JSON Server",
-    is_done: false,
+    is_done: true,
   },
   {
     id: 16,

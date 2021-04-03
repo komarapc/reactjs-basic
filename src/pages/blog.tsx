@@ -2,6 +2,7 @@ const Blog = (props: any) => {
   return (
     <div className="mb-5">
       <h3 className="font-weight-light">{props.title}</h3>
+      {props.blogs.length < 1 ? "No Post" : null}
       {props.blogs.map((blog: any, key: number) => {
         return (
           <div
@@ -10,7 +11,7 @@ const Blog = (props: any) => {
           >
             <h5 className="font-weight-normal">{blog.title}</h5>
             <small>Author: {blog.author}</small>
-            {props.is_button_delete ? (
+            {props.has_button_delete ? (
               <div>
                 <button
                   className="btn btn-sm btn-danger mt-2"
