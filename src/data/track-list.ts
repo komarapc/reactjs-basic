@@ -62,7 +62,7 @@ const track_lists: { id: number; track_name: string; is_done: boolean }[] = [
   {
     id: 13,
     track_name: "useEffect Hook (Basic)",
-    is_done: false,
+    is_done: true,
   },
   {
     id: 14,
