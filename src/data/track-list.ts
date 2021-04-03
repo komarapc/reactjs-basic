@@ -115,8 +115,8 @@ const track_lists: {
   {
     id: 19,
     track_name: "Making a Custom Hook",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 20,
