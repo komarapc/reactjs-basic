@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from "react";
 
 import Blog from "./blog";
 import Error404 from "./errors/error-404";
+import Skeleton from "react-loading-skeleton";
 import useFetch from "../utils/useFetch";
 
 const MainPage = (props: any) => {
@@ -33,7 +34,9 @@ const MainPage = (props: any) => {
         hasError ? (
           resStatus + " " + resMsg
         ) : (
-          "Loading..."
+          <Fragment>
+            <Skeleton count={4} circle={true} />
+          </Fragment>
         )
       ) : (
         <Fragment>
