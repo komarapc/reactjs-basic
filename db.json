@@ -36,5 +36,27 @@
       "author": "Haruka",
       "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
     }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Komar",
+      "email": "komar.izmi@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Ayana",
+      "email": "ayana@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Haruka",
+      "email": "ayana@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Nabila",
+      "email": "nabila@gmail.com"
+    }
   ]
 }

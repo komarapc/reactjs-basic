@@ -4,17 +4,21 @@ import Blog from "./blog";
 import Error404 from "./errors/error-404";
 
 const MainPage = (props: any) => {
-  const [blogs, setBlogs] = useState<any[]>([]);
+  const [data, setData] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [hasError, setHasError] = useState<boolean>(false);
   const [errorStatus, setErrorStatus] = useState<number>();
-  const [errorMsg, setErrorMsg] = useState<string>();
+  const [errorMsg, setErrorMsg] = useState<string>("");
 
-  const url: string = "http://localhost:8000/blogss";
+  const url: string = "http://localhost:8000/blogs";
+
+  const handleDeleteBlog = (id: number) => {
+    const newData = data.filter((data: any) => data.id !== id);
+    setData(newData);
+  };
 
   useEffect(() => {
     setTimeout(() => {
-      // http://localhost:8000/blogs
       fetch(url)
         .then((res) => {
           console.log(res);
@@ -27,20 +31,14 @@ const MainPage = (props: any) => {
           return res.json();
         })
         .then((data) => {
-          setBlogs(data);
+          setData(data);
           setIsLoading(false);
         })
         .catch((e) => {
           console.log(e.message);
         });
     }, 1000);
-  }, []);
-
-  const handleDeleteBlog = (id: number) => {
-    const newBlog = blogs.filter((blog) => blog.id !== id);
-    setBlogs(newBlog);
-  };
-
+  }, [url, errorMsg]);
   return (
     <div>
       <h4 className="display-4">{props.title}</h4>
@@ -61,25 +59,25 @@ const MainPage = (props: any) => {
         : [
             <div>
               <Blog
-                blogs={blogs}
+                blogs={data}
                 title="All blogs"
                 has_button_delete={true}
                 delete_blog={handleDeleteBlog}
               />
               <Blog
                 title="Komar blog's"
-                blogs={blogs.filter((blog: any) => blog.author === "Komar")}
-                is_button_delete={false}
+                blogs={data.filter((blog: any) => blog.author === "Komar")}
+                has_button_delete={false}
               />
               <Blog
                 title="Ayana blog's"
-                blogs={blogs.filter((blog: any) => blog.author === "Ayana")}
-                is_button_delete={false}
+                blogs={data.filter((blog: any) => blog.author === "Ayana")}
+                has_button_delete={false}
               />
               <Blog
                 title="Ayana blog's"
-                blogs={blogs.filter((blog: any) => blog.author === "Haruka")}
-                is_button_delete={false}
+                blogs={data.filter((blog: any) => blog.author === "Haruka")}
+                has_button_delete={false}
               />
             </div>,
           ]}
