@@ -77,7 +77,7 @@ const track_lists: { id: number; track_name: string; is_done: boolean }[] = [
   {
     id: 16,
     track_name: "Fetching Data with useEffect",
-    is_done: false,
+    is_done: true,
   },
   {
     id: 17,
