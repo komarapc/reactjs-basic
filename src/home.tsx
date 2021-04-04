@@ -13,7 +13,7 @@ const Home = () => {
   const title: string = tracks[0].track_name;
   return (
     <Fragment>
-      <Router>
+      <Router basename="react-basic">
         <Navbar></Navbar>
         <div className="container">
           <div className="row p-3">
@@ -30,7 +30,7 @@ const Home = () => {
                   <MainPage title={title} />
                 </Route>
                 <Route exact path="/about">
-                  <AboutPage></AboutPage>
+                  <AboutPage title="About"></AboutPage>
                 </Route>
               </Switch>
             </div>

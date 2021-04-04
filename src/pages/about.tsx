@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 
-const AboutPage = () => {
+const AboutPage = (props: any) => {
   return (
     <Fragment>
       <div>
-        <h1>About Page</h1>
+        <h1 className="display-4">{props.title}</h1>
       </div>
     </Fragment>
   );
