@@ -145,6 +145,48 @@ const track_lists: {
   {
     id: 24,
     track_name: "Route Params",
+    is_done: true,
+    is_success: true,
+  },
+  {
+    id: 25,
+    track_name: "Reusing Custom Hooks",
+    is_done: false,
+    is_success: false,
+  },
+  {
+    id: 26,
+    track_name: "Controlled Input Forms",
+    is_done: false,
+    is_success: false,
+  },
+  {
+    id: 27,
+    track_name: "Submit Event",
+    is_done: false,
+    is_success: false,
+  },
+  {
+    id: 28,
+    track_name: "Making a POST Request",
+    is_done: false,
+    is_success: false,
+  },
+  {
+    id: 29,
+    track_name: "Programatic Redirects",
+    is_done: false,
+    is_success: false,
+  },
+  {
+    id: 30,
+    track_name: "Deleting Blogs",
+    is_done: false,
+    is_success: false,
+  },
+  {
+    id: 31,
+    track_name: "404 Pages",
     is_done: false,
     is_success: false,
   },

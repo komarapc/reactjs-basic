@@ -27,12 +27,10 @@ const Sidebar = (props: any) => {
                     ]
                   : !track_list.is_done && !track_list.is_success
                   ? [
-                      <div
+                      <i
                         key={track_list.id}
-                        className="badge badge-secondary badge-sm p-1 ml-2"
-                      >
-                        Waiting
-                      </div>,
+                        className="far fa-circle mr-2 text-success"
+                      ></i>,
                     ]
                   : [""]}
                 <small>
