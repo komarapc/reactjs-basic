@@ -8,7 +8,7 @@ import Sidebar from "./components/sidebar";
 import track_lists from "./data/track-list";
 
 const Home = () => {
-  const current_track_list: number = 20;
+  const current_track_list: number = 23;
   const tracks = track_lists.filter((track) => track.id === current_track_list);
   const title: string = tracks[0].track_name;
   return (

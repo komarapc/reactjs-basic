@@ -1,9 +1,10 @@
 import { Fragment, useEffect, useState } from "react";
 
 import Blog from "./blog";
-import Error404 from "./errors/error-404";
 import Skeleton from "react-loading-skeleton";
 import useFetch from "../utils/useFetch";
+
+// import Error404 from "./errors/error-404";
 
 const MainPage = (props: any) => {
   const url: string = "http://localhost:8000/blogs";
@@ -35,7 +36,12 @@ const MainPage = (props: any) => {
           resStatus + " " + resMsg
         ) : (
           <Fragment>
-            <Skeleton count={4} circle={true} />
+            <div className="mb-3">
+              <Skeleton count={4} circle={true} />
+            </div>
+            <div className="mb-3">
+              <Skeleton count={4} circle={true} />
+            </div>
           </Fragment>
         )
       ) : (

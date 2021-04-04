@@ -121,20 +121,20 @@ const track_lists: {
   {
     id: 20,
     track_name: "React Router",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 21,
     track_name: "Exact Match Routes",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 22,
     track_name: "Router Links",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 23,

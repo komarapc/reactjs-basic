@@ -8,11 +8,11 @@ const useFetch = (url: string) => {
   const [resMsg, setResMsg] = useState<string>("");
 
   useEffect(() => {
+    const abortCont = new AbortController();
     setTimeout(() => {
       // http://localhost:8000/blogs
-      fetch(url)
+      fetch(url, { signal: abortCont.signal })
         .then((res) => {
-          console.log(res);
           if (!res.ok) {
             setHasError(true);
             setResStatus(res.status);
@@ -31,8 +31,17 @@ const useFetch = (url: string) => {
         })
         .catch((e) => {
           // console.log(e.message);
+          if (e.name === "AbortError") {
+            //code
+          } else {
+            setIsLoading(true);
+            setResMsg(e.message);
+          }
         });
     }, 500);
+    return () => {
+      abortCont.abort();
+    };
   }, [url, resMsg]);
   return [data, isLoading, hasError, resStatus, resMsg];
 };
