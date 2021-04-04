@@ -7,7 +7,8 @@ import { withRouter } from "react-router";
 
 const BlogDetail = (props: any) => {
   const id: string = props.match.params.id;
-  console.log(id);
+
+  // call reusable custom hooks
   const [data, isLoading, hasError, resStatus, resMsg] = useFetch(
     "http://localhost:8000/blogs/" + id
   );

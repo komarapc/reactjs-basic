@@ -151,8 +151,8 @@ const track_lists: {
   {
     id: 25,
     track_name: "Reusing Custom Hooks",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 26,

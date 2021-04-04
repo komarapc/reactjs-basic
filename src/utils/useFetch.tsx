@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+// reusable hooks
 const useFetch = (url: string) => {
   const [data, setData] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
