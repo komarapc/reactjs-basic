@@ -17,7 +17,7 @@ const useFetch = (url: string) => {
             setHasError(true);
             setResStatus(res.status);
             setResMsg(res.statusText);
-            throw Error(resMsg);
+            abortCont.abort();
           } else {
             setHasError(false);
             setResStatus(res.status);
@@ -32,7 +32,7 @@ const useFetch = (url: string) => {
         .catch((e) => {
           // console.log(e.message);
           if (e.name === "AbortError") {
-            //code
+            // throw Error(resMsg);
           } else {
             setIsLoading(true);
             setResMsg(e.message);

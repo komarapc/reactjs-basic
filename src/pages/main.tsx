@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 
-import Blog from "./blog";
+import Blog from "./blogs";
 import Skeleton from "react-loading-skeleton";
 import useFetch from "../utils/useFetch";
 
@@ -40,7 +40,7 @@ const MainPage = (props: any) => {
               <Skeleton count={4} circle={true} />
             </div>
             <div className="mb-3">
-              <Skeleton count={4} circle={true} />
+              <Skeleton count={4} duration={2} circle={true} />
             </div>
           </Fragment>
         )

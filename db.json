@@ -2,36 +2,42 @@
   "blogs": [
     {
       "id": 1,
+      "slug": "first-blog",
       "title": "First Blog",
       "author": "Komar",
       "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
     },
     {
       "id": 2,
+      "slug": "second-blog",
       "title": "Second Blog",
       "author": "Haruka",
       "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
     },
     {
       "id": 3,
+      "slug": "third-blog",
       "title": "Third Blog",
       "author": "Ayana",
       "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
     },
     {
       "id": 4,
+      "slug": "fourth-blog",
       "title": "Fourth Blog",
       "author": "Komar",
       "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
     },
     {
       "id": 5,
+      "slug": "fifth-blog",
       "title": "Fifth Blog",
       "author": "Ayana",
       "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
     },
     {
       "id": 6,
+      "slug": "sixth-blog",
       "title": "Sixth Blog",
       "author": "Haruka",
       "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."

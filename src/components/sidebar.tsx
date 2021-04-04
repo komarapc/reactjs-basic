@@ -11,24 +11,19 @@ const Sidebar = (props: any) => {
           ) : (
             <li key={track_list.id} className="list-group-item ">
               <div key={track_list.id}>
-                <small>
-                  {track_list.id} - {track_list.track_name}
-                </small>
                 {track_list.is_done && track_list.is_success
                   ? [
                       <i
                         key={track_list.id}
-                        className="fa fa-check-circle ml-2 text-success"
+                        className="fa fa-check-circle mr-2 text-success"
                       ></i>,
                     ]
                   : track_list.is_done && !track_list.is_success
                   ? [
-                      <div
+                      <i
                         key={track_list.id}
-                        className="badge badge-danger badge-sm p-1 ml-2"
-                      >
-                        Failed
-                      </div>,
+                        className="fa fa-exclamation-circle mr-2 text-danger"
+                      ></i>,
                     ]
                   : !track_list.is_done && !track_list.is_success
                   ? [
@@ -40,6 +35,9 @@ const Sidebar = (props: any) => {
                       </div>,
                     ]
                   : [""]}
+                <small>
+                  {track_list.id} - {track_list.track_name}
+                </small>
               </div>
             </li>
           );

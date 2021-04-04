@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 import AboutPage from "./pages/about";
+import BlogDetail from "./pages/blogs/blog-detail";
 import { Fragment } from "react";
 import MainPage from "./pages/main";
 import Navbar from "./components/navbar";
@@ -8,7 +9,7 @@ import Sidebar from "./components/sidebar";
 import track_lists from "./data/track-list";
 
 const Home = () => {
-  const current_track_list: number = 23;
+  const current_track_list: number = 24;
   const tracks = track_lists.filter((track) => track.id === current_track_list);
   const title: string = tracks[0].track_name;
   return (
@@ -31,6 +32,9 @@ const Home = () => {
                 </Route>
                 <Route exact path="/about">
                   <AboutPage title="About"></AboutPage>
+                </Route>
+                <Route exact path="/blogs/:id">
+                  <BlogDetail title="Detail Blog"></BlogDetail>
                 </Route>
               </Switch>
             </div>
