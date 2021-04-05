@@ -157,8 +157,8 @@ const track_lists: {
   {
     id: 26,
     track_name: "Controlled Input Forms",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 27,

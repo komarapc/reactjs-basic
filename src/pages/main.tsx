@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 
 import Blog from "./blogs";
+import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import useFetch from "../utils/useFetch";
 
@@ -46,6 +47,9 @@ const MainPage = (props: any) => {
         )
       ) : (
         <Fragment>
+          <Link to="/blogs/create" className="btn btn-sm btn-primary mb-3">
+            Create New Blog
+          </Link>
           <Blog
             blogs={blogs}
             title="All blogs"
