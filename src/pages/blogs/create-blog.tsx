@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
+import { Router, withRouter } from "react-router";
 
 import Head from "../../components/atoms/head";
 import useInput from "../../hooks/useInput";
@@ -63,6 +64,12 @@ const CreateBlog = (props: any) => {
             <button type="submit" className="btn btn-sm btn-primary">
               Submit
             </button>
+            <button
+              className="btn btn-sm btn-danger ml-1"
+              onClick={props.history.goBack}
+            >
+              Back
+            </button>
           </div>
         </form>
       </div>
@@ -70,4 +77,4 @@ const CreateBlog = (props: any) => {
   );
 };
 
-export default CreateBlog;
+export default withRouter(CreateBlog);
