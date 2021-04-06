@@ -163,14 +163,14 @@ const track_lists: {
   {
     id: 27,
     track_name: "Submit Event",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 28,
     track_name: "Making a POST Request",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 29,
