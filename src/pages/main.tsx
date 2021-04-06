@@ -36,20 +36,26 @@ const MainPage = (props: any) => {
         hasError ? (
           resStatus + " " + resMsg
         ) : (
-          <Fragment>
-            <div className="mb-3">
-              <Skeleton count={4} circle={true} />
-            </div>
-            <div className="mb-3">
-              <Skeleton count={4} duration={2} circle={true} />
-            </div>
-          </Fragment>
+          // <Fragment>
+          //   <div className="mb-3">
+          //     <Skeleton count={4} circle={true} />
+          //   </div>
+          //   <div className="mb-3">
+          //     <Skeleton count={4} duration={2} circle={true} />
+          //   </div>
+          // </Fragment>
+          ""
         )
       ) : (
         <Fragment>
-          <Link to="/blogs/create" className="btn btn-sm btn-primary mb-3">
-            Create New Blog
-          </Link>
+          <div className="mb-3">
+            <Link to="/blogs/create" className="btn btn-sm btn-primary mr-1">
+              Create New Blog
+            </Link>
+            <Link to="/blogs/create-blog" className="btn btn-sm btn-primary">
+              Create New - useInput()
+            </Link>
+          </div>
           <Blog
             blogs={blogs}
             title="All blogs"

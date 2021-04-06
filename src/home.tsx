@@ -3,6 +3,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import AboutPage from "./pages/about";
 import BlogCreate from "./pages/blogs/blog-create";
 import BlogDetail from "./pages/blogs/blog-detail";
+import CreateBlog from "./pages/blogs/create-blog";
 import { Fragment } from "react";
 import MainPage from "./pages/main";
 import Navbar from "./components/navbar";
@@ -36,6 +37,9 @@ const Home = () => {
                 </Route>
                 <Route exact path="/blogs/create">
                   <BlogCreate></BlogCreate>
+                </Route>
+                <Route exact path="/blogs/create-blog">
+                  <CreateBlog title="Create Blog"></CreateBlog>
                 </Route>
                 <Route exact path="/blogs/:id">
                   <BlogDetail title="Detail Blog"></BlogDetail>

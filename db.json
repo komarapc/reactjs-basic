@@ -55,6 +55,13 @@
       "slug": "Eight-Blog",
       "author": "Ayana",
       "body": "Cillum ipsum ex deserunt et Lorem sint pariatur ipsum dolore anim fugiat reprehenderit mollit esse. Incididunt voluptate labore cillum mollit sint do laborum quis velit consectetur Lorem mollit anim tempor. Ad voluptate anim deserunt esse magna aute pariatur mollit ea qui minim ut."
+    },
+    {
+      "id": 9,
+      "title": "Ninth Blog",
+      "slug": "Ninth-Blog",
+      "author": "Komar",
+      "body": "this is the ninth blog"
     }
   ],
   "contacts": [

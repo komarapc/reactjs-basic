@@ -12,6 +12,7 @@ const useFetch = (url: string) => {
     const abortCont = new AbortController();
     setTimeout(() => {
       // http://localhost:8000/blogs
+
       fetch(url, { signal: abortCont.signal })
         .then((res) => {
           if (!res.ok) {
@@ -39,7 +40,7 @@ const useFetch = (url: string) => {
             setResMsg(e.message);
           }
         });
-    }, 500);
+    }, 0);
     return () => {
       abortCont.abort();
     };

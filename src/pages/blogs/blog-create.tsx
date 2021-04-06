@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { ChangeEvent, Fragment, useState } from "react";
 
 import ButtonComponent from "../../components/atoms/button-component";
 import author_list from "../../data/author";
@@ -67,6 +67,10 @@ const BlogCreate = (props: any) => {
       });
   };
 
+  const onSubmitForm = (e: any) => {
+    e.preventDefault();
+    console.log(e);
+  };
   /**
    * Render
    * @element
@@ -84,69 +88,73 @@ const BlogCreate = (props: any) => {
           ""
         )}
         <div className="mt-5">
-          {/* author */}
-          <div className="form-group">
-            <label htmlFor="">Author</label>
-            <select
-              name="author"
-              id=""
-              className="form-control"
-              onChange={(e) => setAuthor(e.target.value)}
-              required
-            >
-              <option value="">--Pilih--</option>
-              {author_list.map((author: any, key: number) => {
-                return (
-                  <option value={author.author_name} key={key}>
-                    {author.author_name}
-                  </option>
-                );
-              })}
-            </select>
-          </div>
-          {/* title blog */}
-          <div className="form-group">
-            <label htmlFor="">Title</label>
-            <input
-              type="text"
-              name="title"
-              // value={title}
-              className="form-control"
-              placeholder={"Title"}
-              autoComplete={"off"}
-              onKeyUp={(e) =>
-                handleKeyUpInput((e.target as HTMLInputElement).value)
-              }
-              required
-            />
-          </div>
-          {/* content body */}
-          <div className="form-group">
-            <label htmlFor="">Body</label>
-            <textarea
-              name="body"
-              id="body-content"
-              cols={30}
-              rows={8}
-              className="form-control"
-              placeholder={"Content Body"}
-              onKeyUp={(e) => setBody((e.target as HTMLInputElement).value)}
-              required
-            ></textarea>
-          </div>
-          <div className="d-flex justify-content-center">
-            <ButtonComponent
-              action={props.history.goBack}
-              button_name="Kembali"
-              class={"btn btn-sm btn-secondary mr-1"}
-            />
-            <button
-              className="btn btn-sm btn-primary"
-              onClick={handleSubmitForm}
-            >
-              Simpan
-            </button>
-          </div>
+          <form id={"form-post-blog"} onSubmit={onSubmitForm}>
+            {/* author */}
+            <div className="form-group">
+              <label htmlFor="">Author</label>
+              <select
+                name="author"
+                id={"select-author"}
+                className="form-control"
+                onChange={(e) => setAuthor(e.target.value)}
+                required
+              >
+                <option value="">--Pilih--</option>
+                {author_list.map((author: any, key: number) => {
+                  return (
+                    <option value={author.author_name} key={key}>
+                      {author.author_name}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            {/* title blog */}
+            <div className="form-group">
+              <label htmlFor="">Title</label>
+              <input
+                id={"input-title"}
+                type="text"
+                name="title"
+                // value={title}
+                className="form-control"
+                placeholder={"Title"}
+                autoComplete={"off"}
+                onKeyUp={(e) =>
+                  handleKeyUpInput((e.target as HTMLInputElement).value)
+                }
+                required
+              />
+            </div>
+            {/* content body */}
+            <div className="form-group">
+              <label htmlFor="">Body</label>
+              <textarea
+                name="body"
+                id="body-content"
+                cols={30}
+                rows={8}
+                className="form-control"
+                placeholder={"Content Body"}
+                onKeyUp={(e) => setBody((e.target as HTMLInputElement).value)}
+                required
+              ></textarea>
+            </div>
+            <div className="d-flex justify-content-center">
+              <ButtonComponent
+                action={props.history.goBack}
+                button_name="Kembali"
+                class={"btn btn-sm btn-secondary mr-1"}
+              />
+              <button
+                type="submit"
+                className="btn btn-sm btn-primary"
+                // onClick={handleSubmitForm}
+              >
+                Simpan
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </Fragment>
