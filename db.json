@@ -1,5 +1,20 @@
 {
-  "blogs": [],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "First Blog",
+      "slug": "First-Blog",
+      "author": "Komar",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed pharetra nibh, suscipit vehicula erat. Pellentesque porta tincidunt libero eu ultricies. Integer non sodales sem, ut venenatis arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent egestas odio sit amet congue tempus. Duis tristique velit eget odio vulputate aliquam. Donec tincidunt mauris ac metus porta luctus. Aliquam lectus tellus, bibendum sed faucibus non, egestas nec turpis."
+    },
+    {
+      "id": 2,
+      "title": "Second Blog",
+      "slug": "Second-Blog",
+      "author": "Ayana",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed pharetra nibh, suscipit vehicula erat. Pellentesque porta tincidunt libero eu ultricies. Integer non sodales sem, ut venenatis arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent egestas odio sit amet congue tempus. Duis tristique velit eget odio vulputate aliquam. Donec tincidunt mauris ac metus porta luctus. Aliquam lectus tellus, bibendum sed faucibus non, egestas nec turpis."
+    }
+  ],
   "contacts": [
     {
       "id": 1,

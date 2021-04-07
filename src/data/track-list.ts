@@ -187,8 +187,8 @@ const track_lists: {
   {
     id: 31,
     track_name: "404 Pages",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
 ];
 
