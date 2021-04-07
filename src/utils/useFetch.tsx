@@ -40,7 +40,7 @@ const useFetch = (url: string) => {
             setResMsg(e.message);
           }
         });
-    }, 0);
+    }, 500);
     return () => {
       abortCont.abort();
     };

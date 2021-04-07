@@ -1,9 +1,9 @@
 import { ChangeEvent, Fragment, useState } from "react";
+import { useHistory, withRouter } from "react-router";
 
 import ButtonComponent from "../../components/atoms/button-component";
 import author_list from "../../data/author";
 import slugify from "slugify";
-import { withRouter } from "react-router";
 
 const BlogCreate = (props: any) => {
   /**
@@ -20,6 +20,7 @@ const BlogCreate = (props: any) => {
   /***
    * variable declaration
    */
+  const history = useHistory();
   const url: string = "http://localhost:8000/blogs/";
   const method: string = "POST";
 
@@ -61,6 +62,9 @@ const BlogCreate = (props: any) => {
       .then((data) => {
         setData(data);
         setMessage("Data berhasil disimpan");
+        setTimeout(() => {
+          history.push("/");
+        }, 1000);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -88,7 +92,7 @@ const BlogCreate = (props: any) => {
           ""
         )}
         <div className="mt-5">
-          <form id={"form-post-blog"} onSubmit={onSubmitForm}>
+          <form id={"form-post-blog"}>
             {/* author */}
             <div className="form-group">
               <label htmlFor="">Author</label>
@@ -147,9 +151,9 @@ const BlogCreate = (props: any) => {
                 class={"btn btn-sm btn-secondary mr-1"}
               />
               <button
-                type="submit"
+                type="button"
                 className="btn btn-sm btn-primary"
-                // onClick={handleSubmitForm}
+                onClick={handleSubmitForm}
               >
                 Simpan
               </button>

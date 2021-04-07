@@ -175,14 +175,14 @@ const track_lists: {
   {
     id: 29,
     track_name: "Programatic Redirects",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 30,
     track_name: "Deleting Blogs",
-    is_done: false,
-    is_success: false,
+    is_done: true,
+    is_success: true,
   },
   {
     id: 31,

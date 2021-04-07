@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 
 import Blog from "./blogs";
-import { Link } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import useFetch from "../utils/useFetch";
 
@@ -9,7 +9,7 @@ import useFetch from "../utils/useFetch";
 
 const MainPage = (props: any) => {
   const url: string = "http://localhost:8000/blogs";
-
+  const history = useHistory();
   const [data, isLoading, hasError, resStatus, resMsg] = useFetch(url);
   const [blogs, setBlogs] = useState<any>([]);
   // const [data, setData] = useState<any[]>([]);
@@ -19,6 +19,11 @@ const MainPage = (props: any) => {
   // const [errorMsg, setErrorMsg] = useState<string>("");
 
   const handleDeleteBlog = (id: number) => {
+    fetch("http://localhost:8000/blogs/" + id, {
+      method: "DELETE",
+    }).then(() => {
+      history.push("/");
+    });
     const newData = blogs.filter((blog: any) => blog.id !== id);
     setBlogs(newData);
   };
@@ -36,15 +41,14 @@ const MainPage = (props: any) => {
         hasError ? (
           resStatus + " " + resMsg
         ) : (
-          // <Fragment>
-          //   <div className="mb-3">
-          //     <Skeleton count={4} circle={true} />
-          //   </div>
-          //   <div className="mb-3">
-          //     <Skeleton count={4} duration={2} circle={true} />
-          //   </div>
-          // </Fragment>
-          ""
+          <Fragment>
+            <div className="mb-3">
+              <Skeleton count={4} circle={true} />
+            </div>
+            <div className="mb-3">
+              <Skeleton count={4} duration={2} circle={true} />
+            </div>
+          </Fragment>
         )
       ) : (
         <Fragment>
